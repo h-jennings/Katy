@@ -1,0 +1,85 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~
+    TYPOGRAPHY
+  ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@font-face {
+  font-family: 'Anodina';
+  src: url('../assets/fonts/anodina-extrabold-webfont.woff2') format('woff2'),
+    url('../assets/fonts/anodina-extrabold-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: 900;
+}
+
+@font-face {
+  font-family: 'Anodina';
+  src: url('../assets/fonts/anodina-bold-webfont.woff2') format('woff2'),
+    url('../assets/fonts/anodina-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: 700;
+}
+
+@font-face {
+  font-family: 'Anodina';
+  src: url('../assets/fonts/anodina-regular-webfont.woff2') format('woff2'),
+    url('../assets/fonts/anodina-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: 400;
+}
+
+html {
+  font-family: 'Anodina', Arial, Helvetica, sans-serif;
+}
+
+:root {
+  font-size: 16px;
+  --font-primary: 'Anodina';
+  --base: 1rem;
+  --txt-scale: 1.5;
+  --txt--sm: calc(1rem / var(--txt-scale));
+  --txt-md: calc(1rem * var(--txt-scale));
+  --txt-lg: calc(1rem * (var(--txt-scale) * var(--txt-scale)));
+  --txt-xl: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
+  --txt-xxl: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
+  --txt-decoration: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
+}
+
+.txt--xxl {
+  font-size: var(--txt-xxl);
+  line-height: 1;
+  font-weight: 900;
+}
+
+h1,
+.txt--xl {
+  font-size: var(--txt-xl);
+  line-height: 1;
+  font-weight: 900;
+  margin-bottom: var(--space--reg);
+}
+
+h2,
+.txt--lg {
+  font-size: var(--txt-lg);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--space--reg);
+}
+
+h3,
+.txt--md {
+  font-size: var(--txt-md);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--space--reg);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: var(--space--reg);
+}
+
+.txt--sm {
+  font-size: var(--txt--sm);
+}
