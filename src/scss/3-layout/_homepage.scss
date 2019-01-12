@@ -1,0 +1,150 @@
+/* ~~~~~~~~~~~~~~~~~~~~
+
+Scroll Indicator
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+
+nav.scroll-indicator {
+  position: fixed;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+All Homepage Sections
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+
+main.introduction--container,
+section.experiences,
+section.certs-orgs {
+  margin-left: 11.25rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+Introduction Section
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.introduction--content.col-2 {
+  display: flex;
+  height: calc(100vh - 102.5px);
+
+  h1 {
+    padding-bottom: var(--space--lg);
+  }
+
+  .txt--decoration {
+    position: absolute;
+    line-height: 0.8;
+    right: var(--space--lg);
+    bottom: var(--space--lg);
+  }
+
+  .col-left {
+    width: 43%;
+    padding-left: 11.25rem;
+    align-self: flex-end;
+
+    .arrow--container {
+      height: 66vh;
+      position: relative;
+    }
+
+    .arrow--button {
+      width: 127px;
+      height: 127px;
+      background-color: var(--white);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @extend .flex-container--centered
+    }
+  }
+
+  .col-right {
+    width: 57%;
+    align-self: flex-end;
+
+    .col-right--container {
+      padding: var(--space--md) 12.5rem var(--space--md) var(--space--md);
+      height: 66vh;
+      position: relative;
+    }
+  }
+}
+
+.blue-bg {
+  background-color: var(--blue);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+Experiences Section
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+
+section.experiences {
+  background-color: var(--bone);
+  min-height: 100vh;
+  color: var(--black);
+
+
+
+}
+
+main.experiences--container {
+  padding-top: var(--space--xl);
+  padding-bottom: var(--space--xl);
+
+  h1 {
+    padding: 0 14%;
+    margin-bottom: var(--space--lg);
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
+ul.experiences--list {
+
+  li {
+    display: flex;
+    margin-bottom: var(--space--lg);
+    justify-content: center;
+  }
+
+  h3 {
+    margin-bottom: var(--space--xs);
+  }
+
+  .list--title {
+    padding: 0 var(--space--sm);
+  }
+
+  .list--content {
+    width: 29%;
+    padding: 0 var(--space--md);
+  }
+
+  .list--title {
+    width: 19%;
+  }
+
+  .list--icon {
+    width: 14%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .list--number {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

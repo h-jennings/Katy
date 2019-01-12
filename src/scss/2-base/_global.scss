@@ -1,0 +1,41 @@
+header {
+  margin-top: 102.5px;
+}
+
+.desktop--navigation {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 40px 6%;
+  justify-content: space-between;
+
+  .nav--links--container a {
+    margin-right: var(--space--md);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.name--container {
+  .last-name {
+    margin-left: 8px;
+    display: inline-block;
+  }
+
+  .first-name {
+    display: inline-block;
+  }
+
+
+  .letter {
+    display: inline-block;
+    margin-left: -3px;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1;
+    font-size: var(--txt-md);
+  }
+}

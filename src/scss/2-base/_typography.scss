@@ -28,6 +28,8 @@
 
 html {
   font-family: 'Anodina', Arial, Helvetica, sans-serif;
+  color: var(--white);
+  background-color: var(--black);
 }
 
 :root {
@@ -36,22 +38,32 @@ html {
   --base: 1rem;
   --txt-scale: 1.5;
   --txt--sm: calc(1rem / var(--txt-scale));
-  --txt-md: calc(1rem * var(--txt-scale));
-  --txt-lg: calc(1rem * (var(--txt-scale) * var(--txt-scale)));
-  --txt-xl: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
-  --txt-xxl: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
-  --txt-decoration: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
+  --txt--md: calc(1rem * var(--txt-scale));
+  --txt--lg: calc(1rem * (var(--txt-scale) * var(--txt-scale)));
+  --txt--xl: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
+  --txt--xxl: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
+  --txt--decoration: calc(1rem * (var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale) * var(--txt-scale)));
+}
+
+.txt--decoration {
+  font-size: var(--txt--decoration);
+  color: rgba(255, 255, 255, 0.04);
+  font-weight: 900;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .txt--xxl {
-  font-size: var(--txt-xxl);
+  font-size: var(--txt--xxl);
   line-height: 1;
   font-weight: 900;
 }
 
 h1,
 .txt--xl {
-  font-size: var(--txt-xl);
+  font-size: var(--txt--xl);
   line-height: 1;
   font-weight: 900;
   margin-bottom: var(--space--reg);
@@ -59,7 +71,7 @@ h1,
 
 h2,
 .txt--lg {
-  font-size: var(--txt-lg);
+  font-size: var(--txt--lg);
   font-weight: 700;
   line-height: 1;
   margin-bottom: var(--space--reg);
@@ -67,7 +79,7 @@ h2,
 
 h3,
 .txt--md {
-  font-size: var(--txt-md);
+  font-size: var(--txt--md);
   font-weight: 700;
   line-height: 1;
   margin-bottom: var(--space--reg);
@@ -75,11 +87,18 @@ h3,
 
 p {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.8;
   font-weight: 400;
   margin-bottom: var(--space--reg);
 }
 
 .txt--sm {
   font-size: var(--txt--sm);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
 }

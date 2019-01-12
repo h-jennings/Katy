@@ -11,62 +11,102 @@
 
 <body>
   <div class="wrapper">
+    <nav class="scroll-indicator">scroll</nav>
     <header>
-      <nav></nav>
-      <main class="Introduction--content">
-        <h1>Welcome.</h1>
-        <div class="Introduction--">
-          <div class="Introduction--col-left">
-            <button>
-              <img src="./assets/images/arrow.svg" width="66" height="65">
-            </button>
+      <nav class="desktop--navigation">
+        <div class="name--container">
+          <div class="first-name">
+            <div class="letter">K</div>
+            <div class="letter">a</div>
+            <div class="letter">t</div>
+            <div class="letter">h</div>
+            <div class="letter">r</div>
+            <div class="letter">y</div>
+            <div class="letter">n</div>
           </div>
-          <div class="Introduction--col-right">
-            <p>Katy easily adapts to different environments and navigates the variety of stakeholders involved in a
-              company’s data and privacy practices. She strives to protect companies and consumers through robust
-              solutions designed with privacy from the start.</p>
-            <p>Kathryn Pentz earned two undergraduate degrees; a B.S. in International Affairs and Political Science,
-              and a B.A. in Russian and Eastern European Studies. Since her first year at FSU, she traveled
-              internationally with the World Affairs Program Model United Nations Conferences and served as the
-              Program's Assistant Director of Outreach and the Head Delegate of the traveling team. She received the
-              prestigious Research Intensive Bachelor's Certificate in Political Science (RIBC) through which she
-              conducted research on trade agreements, authoritarian regimes, ethnic factions, and human rights. Over
-              the course of her undergraduate career, Kathryn interned for Fundacion Rahab, which leads the fight
-              against human trafficking in the San Jose, Costa Rica community and the International Rescue Committee,
-              an international refugee resettlement agency. These experiences have culminated in a passion for human
-              rights and a desire to study international law.</p>
+          <div class="last-name">
+            <div class="letter">P</div>
+            <div class="letter">e</div>
+            <div class="letter">n</div>
+            <div class="letter">t</div>
+            <div class="letter">z</div>
+          </div>
+        </div>
+        <div class="nav--links--container">
+          <a href="#">Experience</a>
+          <a href="#">Certifications</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+      <main class="introduction--container">
+        <div class="introduction--content col-2">
+          <div class="col-left">
+            <h1>Welcome.</h1>
+            <div class="arrow--container">
+              <div class="arrow--button">
+                <img src="./assets/images/arrow.svg" width="66" height="65">
+              </div>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="col-right--container blue-bg">
+              <p>I am a Cybersecurity and Privacy Professional in the Washington, DC area. I strive to protect
+                consumers
+                and organizations through robust data governance solutions designed with privacy from the start. I have
+                facilitated multiple wargaming exercises, and I firmly believe in resilience to data security and
+                privacy
+                incidents through red-teaming and iterative practice. Currently, I am a Cyber Risk Consultant for
+                Deloitte.</p>
+              <p>Explore this site to learn more about my experience and find out how to get in contact.</p>
+              <div class="txt--decoration">KP</div>
+            </div>
           </div>
         </div>
       </main>
     </header>
-    <section class="Experiences--container">
-      <main class="Experiences--content">
+    <section class="experiences">
+      <main class="experiences--container">
         <h1>Experiences</h1>
-        <ul class="Experiences--list">
+        <ul class="experiences--list">
           <li>
-            <div class="list--number"></div>
+            <div class="list--number"><img src="./assets/images/01.svg" alt="01" width="65" height="57"></div>
             <div class="list--title">
               <h3>Deloitte & Touche</h3>
               <div class="txt--sm">Consultant</div>
+            </div>
+            <div class="list--content">
+              <p>I am a Cyber Risk Consultant for Deloitte & Touch LLC, where I assist commercial organizations to
+                comply with data privacy regulations, like the General Data Protection Regulation (GDPR), and to
+                develop robust privacy organizations.</p>
             </div>
             <div class="list--icon">
               <img src="./assets/images/deloitte.svg" width="116" height="23">
             </div>
           </li>
           <li>
-            <div class="list--number"></div>
+            <div class="list--number"><img src="./assets/images/02.svg" alt="02" width="82" height="57"></div>
             <div class="list--title">
               <h3>National Journal</h3>
               <div class="txt--sm">Defense & Cybersecurity</div>
+            </div>
+            <div class="list--content">
+              <p>Prior to Deloitte, I led research and analysis for client deliverables on cybersecurity and defense
+                issues for National Journal, a B2B research and advisory services company based in Washington, D.C. </p>
             </div>
             <div class="list--icon">
               <img src="./assets/images/nationalJournal.svg" width="48" height="53">
             </div>
           </li>
           <li>
-            <div class="list--number"></div>
+            <div class="list--number"><img src="./assets/images/03.svg" alt="03" width="80" height="57"></div>
             <div class="list--title">
               <h3>International Experience</h3>
+            </div>
+            <div class="list--content">
+              <p>Working and studying abroad has given me invaluable international perspective. My stints abroad
+                include an 8-week internship in Costa Rica, a 7-week Russian language and culture immersion program,
+                and a 4-week conflict resolution and peace-building program in Switzerland. I speak Spanish well, I
+                speak French conversationally, and I stumble through Russian.</p>
             </div>
             <div class="list--icon">
               <img src="./assets/images/grid-world.svg" width="50" height="50">
@@ -75,20 +115,20 @@
         </ul>
       </main>
     </section>
-    <section class="Certs-Orgs--container">
+    <section class="certs-orgs">
       <main>
         <h1>Certifications and Organizations</h1>
-        <ul class="Certs-Orgs--list">
+        <ul class="certs-orgs--list">
           <li>
-            <h3 class="Certs-Orgs--list-title">Certification</h3>
+            <h3 class="certs-orgs--list-title">Certification</h3>
             <p>I am accredited as a Certified Information Privacy Professionals in US Private Sector Privacy (CIPP/US).</p>
             <p>As the global gold standard for privacy professionals, the CIPP/US certification is a key industry
               benchmark among top employers.</p>
             <img src="./assets/images/CIPP-US_Seal_2013-web.png" alt="CIPP US Seal" width="118" height="118">
           </li>
           <li>
-            <h3 class="Certs-Orgs--list-title">Memberships</h3>
-            <ul class="Certs-Orgs--sub-list">
+            <h3 class="certs-orgs--list-title">Memberships</h3>
+            <ul class="certs-orgs--sub-list">
               <li>
                 <p>The IAPP is the largest and most comprehensive global information privacy community and resource.
                   Founded in 2000, the IAPP is a not-for-profit organization that helps define, support and improve the
@@ -99,7 +139,7 @@
                 <p>Women in CyberSecurity (WiCyS) is the premier organization with national reach dedicated to bringing
                   together women in cybersecurity from academia, research and industry to share knowledge, experience,
                   networking and mentoring.</p>
-                <img src="./assets/images/iapp.svg" alt="Women in CyberSecurity Seal" width="75" height="30">
+                <img src="./assets/images/wicys.png" alt="Women in CyberSecurity Seal" width="80" height="95">
               </li>
             </ul>
           </li>
