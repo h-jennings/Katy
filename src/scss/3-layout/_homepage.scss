@@ -100,7 +100,7 @@ main.experiences--container {
 
   h1 {
     padding: 0 14%;
-    margin-bottom: var(--space--lg);
+    margin-bottom: var(--space--xl);
   }
 
   p {
@@ -147,4 +147,47 @@ ul.experiences--list {
     justify-content: center;
     align-items: flex-start;
   }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+Certifications Section
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+
+section.certs-orgs {
+  padding-top: var(--space--xl);
+  padding-bottom: var(--space--xl);
+  min-height: 100vh;
+
+}
+
+ul.certs-orgs--list,
+ul.certs-orgs--sub-list {
+  display: flex;
+  justify-content: center;
+
+  p,
+  h3 {
+    padding: 0 var(--space--md);
+  }
+
+  .logo--container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+ul.certs-orgs--list>li {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+ul.certs-orgs--list>li:nth-child(1) {
+  width: 33%;
+}
+
+ul.certs-orgs--list>li:nth-child(2) {
+  width: 66%;
 }
