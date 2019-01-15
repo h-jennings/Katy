@@ -1,12 +1,24 @@
-header {
-  margin-top: 102.5px;
+.wrapper {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  max-height: 100vh;
 }
+
+header {
+  // margin-top: 102.5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+Desktop Navigation
+
+~~~~~~~~~~~~~~~~~~~~~~ */
 
 .desktop--navigation {
   display: flex;
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 0;
+  // top: 0;
   padding: 40px 6%;
   justify-content: space-between;
 
@@ -37,5 +49,65 @@ header {
     font-weight: 700;
     line-height: 1;
     font-size: var(--txt-md);
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+Scroll indicator
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+nav.scroll-indicator {
+  position: fixed;
+  left: 0;
+  bottom: var(--space--lg);
+
+  a {
+    font-weight: 400;
+  }
+
+  .scroll-indicator-txt--container {
+    padding-left: var(--space--reg);
+    width: 50%;
+
+  }
+
+  .scroll-indicator--container {
+    display: flex;
+    align-items: center;
+    width: 11.25rem;
+    margin-bottom: var(--space--xsm);
+  }
+
+  .scroll-indicator--container.noMargin {
+    margin: 0;
+  }
+
+  .scroll-indicator--bar {
+    height: 4px;
+  }
+
+  .scroll-indicator--container.is-visible {
+    .scroll-indicator--bar {
+      background-color: var(--blue);
+      width: var(--space--lg);
+    }
+
+    .txt--sm {
+      color: var(--white);
+    }
+  }
+
+  .scroll-indicator--container.not-visible {
+    .scroll-indicator--bar {
+      background-color: var(--bone);
+      width: var(--space--reg);
+    }
+
+    .txt--sm {
+      color: rgba(255, 255, 255, 0.20);
+    }
   }
 }

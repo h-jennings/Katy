@@ -1,15 +1,5 @@
 /* ~~~~~~~~~~~~~~~~~~~~
 
-Scroll Indicator
-
-~~~~~~~~~~~~~~~~~~~~~~ */
-
-nav.scroll-indicator {
-  position: fixed;
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~
-
 All Homepage Sections
 
 ~~~~~~~~~~~~~~~~~~~~~~ */
@@ -127,7 +117,7 @@ ul.experiences--list {
 
   .list--content {
     width: 29%;
-    padding: 0 var(--space--md);
+    padding: 0 var(--space--sm);
   }
 
   .list--title {
@@ -160,34 +150,40 @@ section.certs-orgs {
   padding-bottom: var(--space--xl);
   min-height: 100vh;
 
+  main {
+    padding-right: 11.25rem;
+  }
+
+  h1 {
+    margin-bottom: var(--space--xl);
+    text-align: right;
+  }
 }
 
-ul.certs-orgs--list,
-ul.certs-orgs--sub-list {
-  display: flex;
-  justify-content: center;
+ul.certs-orgs--list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-  p,
   h3 {
-    padding: 0 var(--space--md);
+    margin-bottom: var(--space--xsm);
+  }
+
+  .txt--sm {
+    margin-bottom: var(--space--reg);
+  }
+
+  li {
+    padding: 0 var(--space--reg);
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+  }
+
+  .certs-orgs--list-content p:last-of-type {
+    margin-bottom: var(--space--md);
   }
 
   .logo--container {
-    display: flex;
-    justify-content: center;
+    align-self: center;
+    justify-self: center;
   }
-}
-
-ul.certs-orgs--list>li {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-}
-
-ul.certs-orgs--list>li:nth-child(1) {
-  width: 33%;
-}
-
-ul.certs-orgs--list>li:nth-child(2) {
-  width: 66%;
 }
