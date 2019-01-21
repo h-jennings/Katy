@@ -30,6 +30,40 @@ Desktop Navigation
   }
 }
 
+.mobile--navigation {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+
+
+  .mobile--navigation-button {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: var(--white);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.50);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile--navigation--bar {
+    height: 3px;
+    width: 26px;
+    background-color: var(--black);
+    margin-bottom: 3px;
+  }
+
+  .mobile--navigation--bar.noMargin {
+    margin: 0;
+  }
+}
+
+
+
 .name--container {
   .last-name {
     margin-left: 8px;
@@ -119,5 +153,9 @@ nav.scroll-indicator {
 
   nav.scroll-indicator {
     display: none;
+  }
+
+  .mobile--navigation {
+    display: block;
   }
 }

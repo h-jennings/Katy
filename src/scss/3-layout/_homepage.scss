@@ -212,6 +212,7 @@ ul.experiences--list {
       flex-flow: column;
       align-items: flex-start;
       padding: 0 14%;
+      margin-bottom: var(--space--xl);
     }
 
     .list--icon {
@@ -277,16 +278,37 @@ ul.certs-orgs--list {
 }
 
 @include for-tablet-landscape-down {
+  section.certs-orgs main {
+    padding-right: 0;
+  }
+
+  section.certs-orgs {
+    h1 {
+      padding: 0 14% 0 0;
+    }
+  }
+
   ul.certs-orgs--list {
     grid-template-columns: 1fr;
   }
 
-}
-
-@include for-phone-only {
   ul.certs-orgs--list {
     li {
-      padding: 0 var(--space--lg);
+      padding: 0 14%;
+      margin-bottom: var(--space--xl);
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
+
 }
+
+// @include for-phone-only {
+//   ul.certs-orgs--list {
+//     li {
+//       padding: 0 var(--space--lg);
+//     }
+//   }
+// }
