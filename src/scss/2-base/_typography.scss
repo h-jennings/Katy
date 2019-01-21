@@ -102,3 +102,16 @@ a {
   font-size: 1rem;
   font-weight: 700;
 }
+
+
+@include for-desktop-up {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@include for-desktop-down {
+  :root {
+    font-size: 14px;
+  }
+}

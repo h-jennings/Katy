@@ -10,6 +10,15 @@ section.certs-orgs {
   margin-left: 11.25rem;
 }
 
+@include for-phone-only {
+
+  main.introduction--container,
+  section.experiences,
+  section.certs-orgs {
+    margin-left: 0;
+  }
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~
 
 Introduction Section
@@ -23,6 +32,10 @@ Introduction Section
 
   h1 {
     padding-bottom: var(--space--lg);
+  }
+
+  h1.m--header {
+    display: none;
   }
 
   .txt--decoration {
@@ -61,6 +74,45 @@ Introduction Section
       padding: var(--space--md) 12.5rem var(--space--md) var(--space--md);
       height: 66vh;
       position: relative;
+    }
+  }
+
+  @include for-desktop-down {
+    .col-left {
+      padding-left: 5rem;
+    }
+
+    .col-right .col-right--container {
+      padding: var(--space--md) 6.25rem var(--space--md) var(--space--md);
+    }
+
+    .txt--decoration {
+      font-size: 16vw;
+    }
+  }
+
+  @include for-tablet-landscape-down {
+    .col-left {
+      display: none;
+    }
+
+    .col-right {
+      width: 100%;
+    }
+
+    h1.m--header {
+      display: block;
+    }
+
+    .txt--decoration {
+      font-size: 24vw;
+    }
+  }
+
+  @include for-phone-only {
+    h1.m--header {
+      padding: 0 var(--space--md) var(--space--lg) var(--space--md);
+      margin: 0;
     }
   }
 }
@@ -137,6 +189,35 @@ ul.experiences--list {
     justify-content: center;
     align-items: flex-start;
   }
+
+  @include for-tablet-landscape-down {
+
+    .list--icon,
+    .list--title,
+    .list--content {
+      width: 100%;
+      padding: 0;
+    }
+
+    .list--title {
+      margin-bottom: var(--space--reg);
+    }
+
+    .list--number {
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    li {
+      flex-flow: column;
+      align-items: flex-start;
+      padding: 0 14%;
+    }
+
+    .list--icon {
+      display: none;
+    }
+  }
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~
@@ -152,6 +233,12 @@ section.certs-orgs {
 
   main {
     padding-right: 11.25rem;
+  }
+
+  @include for-phone-only {
+    main {
+      padding-right: 0;
+    }
   }
 
   h1 {
@@ -185,5 +272,21 @@ ul.certs-orgs--list {
   .logo--container {
     align-self: center;
     justify-self: center;
+  }
+
+}
+
+@include for-tablet-landscape-down {
+  ul.certs-orgs--list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@include for-phone-only {
+  ul.certs-orgs--list {
+    li {
+      padding: 0 var(--space--lg);
+    }
   }
 }
