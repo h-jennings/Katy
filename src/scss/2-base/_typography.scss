@@ -115,3 +115,9 @@ a {
     font-size: 14px;
   }
 }
+
+@include for-phone-only {
+  h1 {
+    font-size: 10vw;
+  }
+}

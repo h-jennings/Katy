@@ -107,13 +107,23 @@ Introduction Section
     .txt--decoration {
       font-size: 24vw;
     }
+
+    .col-right .col-right--container {
+      height: unset;
+    }
   }
 
   @include for-phone-only {
     h1.m--header {
-      padding: 0 var(--space--md) var(--space--lg) var(--space--md);
+      padding: 0 var(--space--md) var(--space--xl) var(--space--md);
       margin: 0;
     }
+  }
+}
+
+@include for-tablet-landscape-down {
+  .introduction--content.col-2 {
+    height: unset;
   }
 }
 
@@ -206,6 +216,7 @@ ul.experiences--list {
     .list--number {
       width: 100%;
       justify-content: flex-end;
+      margin-bottom: var(--space--md);
     }
 
     li {
