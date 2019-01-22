@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/h-jennings/Katy/issues"
   },
-  "homepage": "https://github.com/h-jennings/Katy#readme"
+  "homepage": "https://github.com/h-jennings/Katy#readme",
+  "dependencies": {
+    "gsap": "^2.0.2"
+  }
 }
