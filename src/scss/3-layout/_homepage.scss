@@ -118,7 +118,16 @@ Introduction Section
       padding: 0 var(--space--md) var(--space--xl) var(--space--md);
       margin: 0;
     }
+
+    .col-right .col-right--container {
+      padding: var(--space--md) 14% var(--space--md) 14%;
+    }
+
+    .txt--decoration {
+      font-size: 30vw;
+    }
   }
+
 }
 
 @include for-tablet-landscape-down {

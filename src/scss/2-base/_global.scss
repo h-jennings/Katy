@@ -31,6 +31,33 @@ Desktop Navigation
   }
 }
 
+.name--container {
+  .last-name {
+    margin-left: 8px;
+    display: inline-block;
+  }
+
+  .first-name {
+    display: inline-block;
+  }
+
+
+  .letter {
+    display: inline-block;
+    margin-left: -3px;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1;
+    font-size: var(--txt-md);
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+MOBILE NAVIGATION
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+
 .mobile--navigation {
   display: none;
   position: fixed;
@@ -48,7 +75,7 @@ Desktop Navigation
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: center;
+    padding: 0 18px;
   }
 
   .mobile--navigation--bar {
@@ -61,28 +88,12 @@ Desktop Navigation
   .mobile--navigation--bar.noMargin {
     margin: 0;
   }
-}
 
-
-
-.name--container {
-  .last-name {
-    margin-left: 8px;
-    display: inline-block;
-  }
-
-  .first-name {
-    display: inline-block;
-  }
-
-
-  .letter {
-    display: inline-block;
-    margin-left: -2px;
-    margin-bottom: 0;
-    font-weight: 700;
-    line-height: 1;
-    font-size: var(--txt-md);
+  .mobile--navigation-bar--container.is-visible {
+    .mobile--navigation--bar {
+      background-color: var(--blue);
+      width: 30px;
+    }
   }
 }
 
@@ -150,6 +161,10 @@ nav.scroll-indicator {
 
   nav.desktop--navigation .nav--links--container {
     display: none;
+  }
+
+  nav.desktop--navigation {
+    padding: 40px var(--space--md);
   }
 
   nav.scroll-indicator {
