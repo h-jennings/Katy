@@ -1,5 +1,5 @@
 .wrapper {
-  overflow-y: scroll;
+  overflow: hidden scroll;
   scroll-behavior: smooth;
   max-height: 100vh;
   -webkit-overflow-scrolling: touch;

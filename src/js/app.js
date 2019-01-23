@@ -18,9 +18,13 @@ class ScrollToLink {
 
   scrollToLinkLocation() {
     this.tl = new TimelineLite()
-      .add(new TweenLite(window, 2, {
-        scrollTo: '#experiences',
+      .add(new TweenLite(document.body, 2, {
+        scrollTo: 1000,
+      }))
+      .add(new TweenLite(this.DOM.el, 2, {
+        color: 'blue',
       }));
+    console.log(window);
   }
 }
 
