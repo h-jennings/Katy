@@ -1,5 +1,7 @@
-import ScrollToPlugin from 'gsap/umd/ScrollToPlugin';
-import { TimelineLite, TweenLite } from 'gsap';
+import TweenLite from 'gsap/TweenLite';
+import TimelineLite from 'gsap/TimelineLite';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import CSSPlugin from 'gsap/CSSPlugin';
 
 class ScrollToLink {
   constructor(el) {
@@ -17,14 +19,12 @@ class ScrollToLink {
   }
 
   scrollToLinkLocation() {
-    this.tl = new TimelineLite()
-      .add(new TweenLite(document.body, 2, {
-        scrollTo: 1000,
-      }))
-      .add(new TweenLite(this.DOM.el, 2, {
-        color: 'blue',
+    this.tl = new TimelineLite({
+      onComplete: () => { console.log('complete'); },
+    })
+      .add(new TweenLite(window, 0.3, {
+        scrollTo: '#experiences',
       }));
-    console.log(window);
   }
 }
 
