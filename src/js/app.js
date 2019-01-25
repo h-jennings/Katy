@@ -1,33 +1,34 @@
-import TweenLite from 'gsap/TweenLite';
-import TimelineLite from 'gsap/TimelineLite';
+/* eslint-disable import/no-cycle */
+
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
-import CSSPlugin from 'gsap/CSSPlugin';
+import TweenMax from 'gsap/TweenMax';
+import scrollmagic from 'scrollmagic';
+import ScrollToLink from './modules/scrollToLink';
 
-class ScrollToLink {
-  constructor(el) {
-    this.DOM = { el };
-    this.initEvents();
-  }
+// Scroll Indicator Links (Desktop) and corresponding scroll to locations
 
-  initEvents() {
-    this.clickFn = () => {
-      this.scrollToLinkLocation();
-    };
-
-
-    this.DOM.el.addEventListener('click', this.clickFn);
-  }
-
-  scrollToLinkLocation() {
-    this.tl = new TimelineLite({
-      onComplete: () => { console.log('complete'); },
-    })
-      .add(new TweenLite(window, 0.3, {
-        scrollTo: '#experiences',
-      }));
-  }
-}
+const scrollIndicatorLinks = {
+  homeLink: {
+    DOMElement: document.querySelector('#scroll-indicator-link--home'),
+    scrollToSection: '#home',
+  },
+  experiencesLink: {
+    DOMElement: document.querySelector('#scroll-indicator-link--experiences'),
+    scrollToSection: '#experiences',
+  },
+  certificationsLink: {
+    DOMElement: document.querySelector('#scroll-indicator-link--certifications'),
+    scrollToSection: '#certifications',
+  },
+  contactLink: {
+    DOMElement: document.querySelector('#scroll-indicator-link--contact'),
+    scrollToSection: '#contact',
+  },
+};
 
 
-const experiencesLink = document.querySelector('#scroll-indicator-link--experiences');
-const scrollToExperiences = new ScrollToLink(experiencesLink);
+// Instantiating Desktop Scroll indicator links
+const scrollToHome = new ScrollToLink(scrollIndicatorLinks.homeLink.DOMElement, scrollIndicatorLinks.homeLink.scrollToSection);
+const scrollToExperiences = new ScrollToLink(scrollIndicatorLinks.experiencesLink.DOMElement, scrollIndicatorLinks.experiencesLink.scrollToSection);
+const scrollToCertifications = new ScrollToLink(scrollIndicatorLinks.certificationsLink.DOMElement, scrollIndicatorLinks.certificationsLink.scrollToSection);
+const scrollToContact = new ScrollToLink(scrollIndicatorLinks.contactLink.DOMElement, scrollIndicatorLinks.contactLink.scrollToSection);

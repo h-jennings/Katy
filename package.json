@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/h-jennings/Katy#readme",
   "dependencies": {
-    "gsap": "^2.0.2"
+    "gsap": "^2.0.2",
+    "scrollmagic": "^2.0.6"
   }
 }
