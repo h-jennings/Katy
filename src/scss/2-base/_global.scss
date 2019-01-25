@@ -148,7 +148,7 @@ nav.scroll-indicator {
     }
   }
 
-  .scroll-indicator--container.not-visible {
+  .scroll-indicator--container {
     .scroll-indicator--bar {
       background-color: var(--bone);
       width: var(--space--reg);
