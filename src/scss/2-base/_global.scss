@@ -81,6 +81,7 @@ MOBILE NAVIGATION
     width: 26px;
     background-color: var(--black);
     margin-bottom: 3px;
+    transition: all 0.2s linear;
   }
 
   .mobile--navigation--bar.noMargin {
@@ -91,6 +92,7 @@ MOBILE NAVIGATION
     .mobile--navigation--bar {
       background-color: var(--blue);
       width: 30px;
+      transition: all 0.2s linear;
     }
   }
 }
@@ -141,6 +143,8 @@ nav.scroll-indicator {
     .scroll-indicator--bar {
       background-color: var(--blue);
       width: var(--space--lg);
+      // TODO: need to adjust timing and easing
+      transition: all 0.2s linear;
     }
 
     .txt--sm {
@@ -156,6 +160,7 @@ nav.scroll-indicator {
 
     .txt--sm {
       color: rgba(255, 255, 255, 0.20);
+      transition: all 0.2s linear;
     }
   }
 }
