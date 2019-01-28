@@ -22,6 +22,7 @@ Desktop Navigation
 
   .nav--links--container a {
     margin-right: var(--space--md);
+    cursor: pointer;
 
     &:last-of-type {
       margin-right: 0;
@@ -137,6 +138,15 @@ nav.scroll-indicator {
 
   .scroll-indicator--bar {
     height: 4px;
+  }
+
+
+
+
+  #scroll-indicator-link--contact.scroll-indicator--container.is-visible {
+    .scroll-indicator--bar {
+      background-color: var(--black);
+    }
   }
 
   .scroll-indicator--container.is-visible {
