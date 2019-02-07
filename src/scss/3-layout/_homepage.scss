@@ -26,14 +26,20 @@ Introduction Section
 
 ~~~~~~~~~~~~~~~~~~~~~~ */
 
-
-.introduction--content.col-2 {
-  display: flex;
+main.introduction--container {
   height: calc(100vh - 102.5px);
 
   h1 {
     padding-bottom: var(--space--lg);
+    padding-top: var(--space--lg);
+    margin-bottom: 0;
   }
+}
+
+
+.introduction--content.col-2 {
+  display: flex;
+  height: 100%;
 
   h1.m--header {
     display: none;
@@ -44,15 +50,18 @@ Introduction Section
     line-height: 0.8;
     right: var(--space--lg);
     bottom: var(--space--lg);
+    font-size: 15vw;
   }
 
   .col-left {
     width: 43%;
     padding-left: 11.25rem;
     align-self: flex-end;
+    height: 100%;
+    position: relative;
 
     .arrow--container {
-      height: 66vh;
+      // height: 66vh;
       position: relative;
     }
 
@@ -78,7 +87,16 @@ Introduction Section
     }
   }
 
+  @include for-big-desktop-up {
+    .col-right {
+      .txt--decoration {
+        font-size: var(--txt--decoration);
+      }
+    }
+  }
+
   @include for-desktop-down {
+
     .col-left {
       padding-left: 5rem;
     }
