@@ -67,10 +67,6 @@ main.introduction--container {
     height: 100%;
     position: relative;
 
-    .arrow--container {
-      position: relative;
-    }
-
     .arrow--button {
       width: 127px;
       height: 127px;
@@ -78,6 +74,14 @@ main.introduction--container {
       position: absolute;
       bottom: 0;
       right: 0;
+      cursor: pointer;
+      user-select: none;
+
+      img {
+        pointer-events: none;
+        user-select: none;
+      }
+
       @extend .flex-container--centered
     }
   }
@@ -101,6 +105,10 @@ main.introduction--container {
   @include for-big-desktop-up {
     .col-right {
       height: 66%;
+
+      p {
+        font-size: 16px;
+      }
 
       .txt--decoration {
         font-size: var(--txt--decoration);
@@ -147,7 +155,7 @@ main.introduction--container {
 
   @include for-phone-only {
     h1.m--header {
-      padding: 0 var(--space--md) var(--space--xl) var(--space--md);
+      padding: var(--space--md) var(--space--md) var(--space--lg) 14%;
       margin: 0;
     }
 
@@ -416,5 +424,41 @@ Contact Section
   a {
     font-weight: 400;
     text-decoration: underline;
+  }
+}
+
+@include for-tablet-landscape-down {
+
+  #contact {
+    height: unset;
+  }
+
+  main.footer--content.col-2 {
+
+    padding: var(--space--xl) 14% var(--space--xl) 14%;
+
+    &.col-2 {
+      flex-flow: column;
+
+      .col-left {
+        padding: 0;
+        margin-bottom: var(--space--lg);
+      }
+
+      .col-right {
+        width: unset;
+      }
+    }
+
+    .col--content {
+      margin-bottom: var(--space--md);
+    }
+  }
+
+}
+
+@include for-phone-only {
+  main.footer--content {
+    margin-left: 0;
   }
 }

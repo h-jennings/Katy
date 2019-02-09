@@ -51,6 +51,13 @@ const topNavigationLinks = {
   },
 };
 
+const arrowBtn = {
+  arrowButton: {
+    DOMElement: document.querySelector('.arrow--button'),
+    scrollToSection: '#experiences',
+  },
+};
+
 const mobileScrollIndicator = {
   mobileHomeIndicator: {
     DOMElement: document.querySelector('.mobile--navigation-bar--container.home'),
@@ -79,6 +86,7 @@ const scrollToHome = new ScrollToLink(scrollIndicatorLinks.homeLink.DOMElement, 
 const scrollToExperiences = new ScrollToLink(scrollIndicatorLinks.experiencesLink.DOMElement, scrollIndicatorLinks.experiencesLink.scrollToSection);
 const scrollToCertifications = new ScrollToLink(scrollIndicatorLinks.certificationsLink.DOMElement, scrollIndicatorLinks.certificationsLink.scrollToSection);
 const scrollToContact = new ScrollToLink(scrollIndicatorLinks.contactLink.DOMElement, scrollIndicatorLinks.contactLink.scrollToSection);
+const scrollToArrowBtn = new ScrollToLink(arrowBtn.arrowButton.DOMElement, arrowBtn.arrowButton.scrollToSection);
 
 // * Instantiating Desktop Top Navigation links (ScrollTo)
 const topScrollToHome = new ScrollToLink(topNavigationLinks.homeLink.DOMElement, topNavigationLinks.homeLink.scrollToSection);
