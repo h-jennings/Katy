@@ -3,10 +3,6 @@
   -webkit-overflow-scrolling: touch;
 }
 
-header {
-  // margin-top: 102.5px;
-}
-
 /* ~~~~~~~~~~~~~~~~~~~~
 
 Desktop Navigation
@@ -95,6 +91,35 @@ MOBILE NAVIGATION
       width: 30px;
       transition: all 0.2s linear;
     }
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+MOBILE NAVIGATION OVERLAY
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+
+.mobile--navigation-overlay--container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  background-color: var(--black);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-size: var(--txt--lg);
+    cursor: pointer;
+  }
+
+  a:active {
+    -webkit-text-stroke: 1px var(--white);
+    text-stroke: 1px var(--white);
+    color: var(--black);
   }
 }
 
