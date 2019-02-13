@@ -81,3 +81,8 @@ th {
   padding: 0;
   text-align: left;
 }
+
+// Removes gray highlight when links are pressed on mobile safari
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

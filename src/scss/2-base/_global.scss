@@ -103,17 +103,19 @@ MOBILE NAVIGATION OVERLAY
 .mobile--navigation-overlay--container {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  // height: calc(var(--vh, 1vh) * 100);
+  position: fixed;
   z-index: 2;
   background-color: var(--black);
-  display: flex;
+  display: none;
+  opacity: 0;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 
   a {
     font-size: var(--txt--lg);
-    cursor: pointer;
+    opacity: 0;
   }
 
   a:active {
@@ -196,6 +198,37 @@ nav.scroll-indicator {
     .txt--sm {
       color: rgba(255, 255, 255, 0.20);
       transition: all 0.2s linear;
+    }
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~
+
+SCROLL INDICATOR CLOSED
+
+~~~~~~~~~~~~~~~~~~~~~~ */
+.mobile--navigation-button.close {
+  .mobile--navigation-bar--container {
+    .mobile--navigation--bar {
+      background-color: var(--black);
+      width: 26px;
+      margin: 0;
+      align-items: center;
+
+      &.bar1,
+      &.bar4 {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+      }
+
+      &.bar2 {
+        transform: translateY(1px) rotate(-45deg)
+      }
+
+      &.bar3 {
+        transform: translateY(-2px) rotate(45deg)
+      }
     }
   }
 }

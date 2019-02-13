@@ -6,6 +6,8 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import TweenMax from 'gsap/TweenMax';
 import ScrollToLink from './modules/scrollToLink';
 import ScrollIndicator from './modules/scrollIndicator';
+import MobileOverlay from './modules/mobileOverlay';
+import { mobileLinkFix, calcMobileVh } from './modules/mobileFixes';
 
 // Scroll Indicator Links (Desktop) and corresponding scroll to locations
 
@@ -80,6 +82,11 @@ const mobileScrollIndicator = {
     triggerContainer: document.querySelector('#contact'),
   },
 };
+
+const mobileOverlay = document.querySelector('.mobile--navigation-overlay--container');
+
+// * Instantiating Mobile Overlay (MobileOverlay)
+const toggleMobileOverlay = new MobileOverlay(mobileOverlay);
 
 // * Instantiating Desktop Scroll indicator links (ScrollTo)
 const scrollToHome = new ScrollToLink(scrollIndicatorLinks.homeLink.DOMElement, scrollIndicatorLinks.homeLink.scrollToSection);
