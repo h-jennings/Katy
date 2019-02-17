@@ -1,7 +1,7 @@
 /* global TweenLite TimelineLite */
 
 import ScrollMagic from 'scrollmagic';
-import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 export default class ScrollIndicator {
   constructor(el, triggerContainer) {
@@ -13,9 +13,7 @@ export default class ScrollIndicator {
 
 
   animateScrollIndicator() {
-    const animateScrollIndicatorController = new ScrollMagic.Controller({
-      addIndicators: false,
-    });
+    const animateScrollIndicatorController = new ScrollMagic.Controller();
     const scrollIndicatorSceneExperiences = new ScrollMagic.Scene({
       triggerElement: this.triggerContainer,
       duration: `${this.containerHeight}`,
