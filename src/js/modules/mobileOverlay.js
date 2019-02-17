@@ -1,8 +1,9 @@
+/* global TweenLite TimelineLite */
+
 import { Power3 } from 'gsap/EasePack';
 import { TweenLite } from 'gsap/TweenMax';
 import { TimelineLite } from 'gsap';
 
-/* global TweenLite TimelineLite */
 
 export default class MobileOverlay {
   constructor(el) {
@@ -16,7 +17,6 @@ export default class MobileOverlay {
 
   initEvents() {
     this.clickFn = () => {
-      // debugger;
       if (this.isOverlayHidden) {
         this.showOverlay();
       } else {
@@ -24,8 +24,13 @@ export default class MobileOverlay {
       }
     };
 
+    this.linkClickFn = (e) => {
+      this.linkHideOverlay(e);
+    };
+
 
     this.overlayBtn.addEventListener('click', this.clickFn);
+    this.overlayLinks.forEach(overlayLink => overlayLink.addEventListener('click', this.linkClickFn));
   }
 
   showOverlay() {
@@ -37,9 +42,16 @@ export default class MobileOverlay {
     this.toggleOverlay('hide');
   }
 
+  linkHideOverlay(e) {
+    this.toggleOverlay('hide');
+    // ! Need to add scroll to functionality here
+    // ! Already have the logic to get the link to work properly with the scrollTo property
+    const section = e.target;
+    console.log(section.dataset.section);
+  }
+
 
   toggleOverlay(action) {
-    // debugger;
     TweenLite.defaultEase = Power3.easeInOut;
 
 
@@ -69,11 +81,14 @@ export default class MobileOverlay {
     }
 
     if (action === 'hide') {
+      const overlayLinksReversed = [...this.overlayLinks].reverse();
+
+      // debugger;
       this.overlayTl
         .set(this.overlayBtn, {
           className: '-=close',
         })
-        .staggerTo(this.overlayLinks, 0.2, {
+        .staggerTo(overlayLinksReversed, 0.2, {
           opacity: 0,
         }, 0.05)
         .to(this.mainWrapper, 0.4, {
@@ -88,7 +103,6 @@ export default class MobileOverlay {
 
 
       this.isOverlayHidden = true;
-      // this.overlayBtn.classList.remove('close');
     }
   }
 }
