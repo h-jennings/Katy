@@ -47,7 +47,14 @@ export default class MobileOverlay {
     // ! Need to add scroll to functionality here
     // ! Already have the logic to get the link to work properly with the scrollTo property
     const section = e.target;
-    console.log(section.dataset.section);
+    // console.log(section.dataset.section);
+
+    this.overlayLinksTl = new TimelineLite();
+
+    this.overlayTl
+      .to(window, 0.5, {
+        scrollTo: `#${section.dataset.section}`,
+      });
   }
 
 
@@ -83,7 +90,6 @@ export default class MobileOverlay {
     if (action === 'hide') {
       const overlayLinksReversed = [...this.overlayLinks].reverse();
 
-      // debugger;
       this.overlayTl
         .set(this.overlayBtn, {
           className: '-=close',
@@ -92,7 +98,7 @@ export default class MobileOverlay {
           opacity: 0,
         }, 0.05)
         .to(this.mainWrapper, 0.4, {
-          overflow: 'scroll',
+          overflow: '',
         }, '-=0.4')
         .to(document.body, 0.4, {
           overflow: '',
