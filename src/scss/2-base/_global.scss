@@ -113,12 +113,24 @@ MOBILE NAVIGATION OVERLAY
   justify-content: center;
   align-items: center;
 
-  a {
+  button {
+    color: var(--white);
     font-size: var(--txt--lg);
     opacity: 0;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: var(--space--xsm);
+    background-color: transparent;
+    border: 0;
+    font-family: var(--font-primary);
   }
 
-  a:active {
+  button:last-of-type {
+    margin-bottom: 0;
+  }
+
+  button:active {
     -webkit-text-stroke: 1px var(--white);
     text-stroke: 1px var(--white);
     color: var(--black);

@@ -10,7 +10,7 @@ export default class MobileOverlay {
     this.DOM = { el };
     this.overlayBtn = document.querySelector('.mobile--navigation-button');
     this.mainWrapper = document.querySelector('.wrapper');
-    this.overlayLinks = document.querySelectorAll('.mobile--navigation-overlay--container a');
+    this.overlayLinks = document.querySelectorAll('.mobile--navigation-overlay--container button');
     this.isOverlayHidden = true;
     this.initEvents();
   }
